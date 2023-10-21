@@ -16,6 +16,12 @@ public class RunningAppApplication {
         UserNameRepository userNameRepository2 = context.getBean(UserNameRepository.class);
         userNameRepository2.save(userName2);
 
+        Event event1 = new Event (1L, "Półmaraton Kraśnik 2023", "2023-10-08","Kraśnik", "21,1km");
+        EventRepository eventRepository1 = context.getBean(EventRepository.class);
+        eventRepository1.save(event1);
+        Event event2 = new Event (2L, "Praska piątka", "2023-09-03","Warszawa", "5km");
+        EventRepository eventRepository2 = context.getBean(EventRepository.class);
+        eventRepository2.save(event2);
     }
 
 }

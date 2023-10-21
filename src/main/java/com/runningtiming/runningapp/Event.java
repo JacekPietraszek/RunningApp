@@ -11,8 +11,26 @@ public class Event {
     private String dateOfEvent; //(YYYY-MM-DD)
     private String place;
     private String distance;
-    private String description;
 
     public Event() {
+    }
+
+    public Event(Long eventId, String name, String dateOfEvent, String place, String distance) {
+        this.eventId = eventId;
+        this.name = name;
+        this.dateOfEvent = dateOfEvent;
+        this.place = place;
+        this.distance = distance;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "eventId=" + eventId +
+                ", name='" + name + '\'' +
+                ", dateOfEvent='" + dateOfEvent + '\'' +
+                ", place='" + place + '\'' +
+                ", distance='" + distance + '\'' +
+                '}';
     }
 }
