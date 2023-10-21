@@ -16,6 +16,28 @@ public class UserName {
     private char gender;
 
     public UserName() {
+    }
 
+    public UserName(Long id, String login, String password, String firstname, String lastname, String birthdate, char gender) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.birthdate = birthdate;
+        this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return "UserName{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", birthdate='" + birthdate + '\'' +
+                ", gender=" + gender +
+                '}';
     }
 }
