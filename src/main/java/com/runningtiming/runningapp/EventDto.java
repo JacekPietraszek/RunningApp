@@ -1,21 +1,13 @@
 package com.runningtiming.runningapp;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class Event {
-    @Id
+public class EventDto {
     private Long eventId;
     private String name;
     private String dateOfEvent; //(YYYY-MM-DD)
     private String place;
     private String distance;
 
-    public Event() {
-    }
-
-    public Event(Long eventId, String name, String dateOfEvent, String place, String distance) {
+    public EventDto(Long eventId, String name, String dateOfEvent, String place, String distance) {
         this.eventId = eventId;
         this.name = name;
         this.dateOfEvent = dateOfEvent;
@@ -65,7 +57,7 @@ public class Event {
 
     @Override
     public String toString() {
-        return "Event{" +
+        return "EventDto{" +
                 "eventId=" + eventId +
                 ", name='" + name + '\'' +
                 ", dateOfEvent='" + dateOfEvent + '\'' +
